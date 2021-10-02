@@ -1,0 +1,63 @@
+@import "./variables";
+
+:root {
+  --color-primary: #02c2e0;
+  --color-primary-light: #00fff3;
+  --color-primary-dark: #00a1ff;
+  --color-primary-mild: #528dbf;
+  --color-primary-transparent: #4a93a754;
+
+  --color-grey: #bababa;
+  --color-grey-dark: #5f5f5f;
+
+  --color-container-grey : #3a3a3aa1;
+
+  --font-primary: "Roboto", sans-serif;
+  --font-secondary: "Caveat", cursive;
+  --font-tertiary: "Ubuntu", sans-serif;
+  --font-quaternary: "Rajdhani", sans-serif;
+
+  // --color-grey-light-1: #faf9f9;
+  // --color-grey-light-2: #f4f2f2;
+  // --color-grey-light-3: #f0eeee;
+  // --color-grey-light-4: #ccc;
+
+  // --color-grey-dark-1: #333;
+  // --color-grey-dark-2: #777;
+  // --color-grey-dark-3: #999;
+
+  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+
+  --line: 1px solid var(--color-grey-light-2);
+  --container-box-shadow: 0 0 0.5rem 1px var(--color-primary-light);
+}
+
+// $bp-largest: 75em; //1200px
+// $bp-large: 68.75em; //1100px
+// $bp-medium: 56.25em; //900px
+// $bp-small: 37.5em; //600px
+// $bp-smallest: 31.25em; //500px
+
+*,
+*::after,
+*::before {
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  @media only screen and (max-width: $bp-large) {
+    font-size: 56.25%;
+  }
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 50%;
+  }
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  color: white;
+}
