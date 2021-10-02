@@ -33,13 +33,15 @@ app.post('/api/mail', (req, res) => {
     }
 })
 
+
+
 app.use(express.static('client/build'));
 if (process.env.NODE_ENV === 'production') {
     console.log("inside production00");
     const path = require('path');
-    app.get('/*', (req, res) => {
+    app.get('*', (req, res) => {
         console.log("inside send file", __dirname);
-        res.sendFile(path.resolve(__dirname, './Client', 'build', 'index.html'))
+        res.sendFile(path.resolve(__dirname, './client', 'build', 'index.html'))
     });
 }
 
