@@ -1,0 +1,50 @@
+@import "../../sass/variables";
+
+.colorpalletContainer {
+    position: fixed;
+    bottom: 0;
+    margin: 8rem 2rem;
+    padding: 1rem 1rem;
+    font-family: var(--font-quaternary);
+    font-style: italic;
+    letter-spacing: 1px;
+    border-radius: 3px;
+    font-size: 1.5rem;
+    background-color: #1d1d1dab;
+    z-index: 200;
+    // background: linear-gradient(45deg, var(--color-primary) , var(--color-primary-mild));
+    box-shadow: 0rem 0 1rem var(--color-primary) ;
+    
+    @media only screen and (max-width: $bp-smallest) {
+        margin: 12rem 1rem;
+    }
+
+}
+.colorpallet{
+    font-weight: 600;
+    cursor: pointer;
+    height: 2rem;
+    width: 2rem;
+    background-color: var(--color-primary);
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+.color{
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+.palletContainer{
+    margin: 1rem 0rem;
+    display: flex;
+    gap: 1rem ;
+    cursor: pointer;
+    :hover{
+        transform: scale(1.1);
+    }
+}
+.palletBoxContainer{
+    // margin: 1rem;
+}

@@ -9,12 +9,12 @@ import { AppContext } from './Context/AppContext';
 import './App.scss';
 import './sass/index.scss'
 
-// const Landing = lazy(() => import('./pages/landing/Landing'));
-// const Footer = lazy(() => import('./componenets/footer/Footer'));
-// const About = lazy(() => import('./pages/About/About'));
-// const Resume = lazy(() => import('./pages/Resume/Resume'));
-// const Certification = lazy(() => import('./pages/Certification/Certification'));
-// const Contact = lazy(() => import('./pages/Contact/Contact'));
+const Landing = lazy(() => import('./pages/landing/Landing'));
+const Footer = lazy(() => import('./componenets/footer/Footer'));
+const About = lazy(() => import('./pages/About/About'));
+const Resume = lazy(() => import('./pages/Resume/Resume'));
+const Certification = lazy(() => import('./pages/Certification/Certification'));
+const Contact = lazy(() => import('./pages/Contact/Contact'));
 
 const App = (props) => {
 
@@ -30,7 +30,7 @@ const App = (props) => {
         <Suspense fallback={<div />}>
 
           <AppContext.Provider value={{ colorChange, setcolorChange }}>
-            {/* <Landing /> */}
+            <Landing />
 
             <Switch>
 
@@ -38,7 +38,7 @@ const App = (props) => {
                 path='/'
                 render={() => <div> </div>}
               />
-              {/* <Route exact
+              <Route exact
                 path='/about'
                 render={() => <About />}
               />
@@ -53,13 +53,13 @@ const App = (props) => {
               <Route exact
                 path='/contact'
                 render={() => <Contact />}
-              /> */}
+              />
 
               <Route render={() => <Redirect to={{ pathname: "/" }} />} />
 
             </Switch>
 
-            {/* <Footer /> */}
+            <Footer />
 
           </AppContext.Provider>
 
