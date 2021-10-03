@@ -17,9 +17,9 @@ app.get('/api', (req, res) => {
 })
 
 //mail route
-app.post('/api/mail', (req, res) => {
+app.post('/api/mail', async (req, res) => {
     console.log("mail sent !!", req.body)
-    const isSend = sendMail(req.body);
+    const isSend = await sendMail(req.body);
     if (isSend) {
         res.status(200).json({
             status: 'sucsess',
