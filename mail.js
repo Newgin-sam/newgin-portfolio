@@ -30,9 +30,10 @@ const sendMail = async (values) => {
 
         const options = {
             from: "newginsam@gmail.com",
-            to: values.email,
+            to: "newginsam@gmail.com",
             subject: `${values.name} : ${values.subject}`,
-            text: values.message
+            text: `${values.message} 
+            email : ${values.email}`
         };
 
         transporter.sendMail(options, function (err, info) {
