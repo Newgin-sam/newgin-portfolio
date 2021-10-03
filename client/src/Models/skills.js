@@ -9,16 +9,29 @@ const Skills = [
     },
     {
         head: "Web Development :",
-        value: "Reactjs, Nodejs, Expressjs, Redux, Hooks, scss"
+        value: "MERN stack, Redux, Hooks, HTML/CSS, Sass, Redux, Firebase"
     },
     {
         head: "Version control system :",
-        value: "Github, Gitlab, SVN"
+        value: "Github, Gitlab"
     },
     {
         head: "Database :",
-        value: "MySQL, PostgreSQL, MongoDB."
+        value: "MySQL, MongoDB."
     },
+    {
+        head: "Web Hosting :",
+        value: "Heroku, Surge, Vercel, Firebase"
+    },
+    {
+        value: "Object-Oriented Programming"
+    },
+    {
+        value: "Analytical Thinking and Problem Solving"
+    },
+    {
+        value: "Eagerness to Learn New Technologies"
+    }
 ]
 
 export const aboutSkill = [{
