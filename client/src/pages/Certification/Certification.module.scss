@@ -21,7 +21,7 @@
   }
   @media only screen and (max-width: $bp-smallest) {
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(7, 35rem);
+    grid-template-rows: repeat(8, 35rem);
   }
 }
 .card {
