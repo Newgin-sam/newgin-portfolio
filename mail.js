@@ -36,18 +36,25 @@ const sendMail = async (values) => {
             email : ${values.email}`
         };
 
-        transporter.sendMail(options, function (err, info) {
-            if (err) {
-                console.log(err);
-                return false;
-            }
-            return true;
-        })
-
+        let res = transportMail(transporter, options)
     } catch (e) {
         return e;
     }
 
+}
+
+const transportMail = (transporter, options) => {
+    return new Promise((resolve, reject) => {
+        transporter.sendMail(options, function (err, info) {
+            console.log(info);
+            if (err) {
+                console.log(err);
+                resolve(false);
+            } else {
+                resolve(true);
+            }
+        })
+    })
 }
 
 module.exports = sendMail;
