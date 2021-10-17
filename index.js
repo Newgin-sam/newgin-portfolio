@@ -6,6 +6,8 @@ const enforce = require('express-sslify')
 
 app.use(express.json());
 app.use(cors());
+
+// please commen the below code while using in local
 app.use(enforce.HTTPS({ trustProtoHeader: true }));
 
 app.use(function (req, res, next) {
