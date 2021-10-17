@@ -5,9 +5,12 @@ import { IoLocationOutline, IoShareSocialOutline } from 'react-icons/io5';
 import { HiOutlineMail } from 'react-icons/hi'
 import { IoLogoInstagram, IoLogoGithub, IoLogoLinkedin } from 'react-icons/io'
 
+import { toast } from 'react-toastify';
 import PageContainer from '../../componenets/PageContainer/PageContainer';
 import PageTitle from '../../componenets/PageTitle/PageTitle';
 import SecondaryTitle from '../../componenets/SecondaryTitle/SecondaryTitle';
+import { ReactComponent as Loading } from "../../assets/Loading.svg";
+
 import styles from './Contact.module.scss';
 
 function Contact(props) {
@@ -20,12 +23,26 @@ function Contact(props) {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        axios.post('/api/mail', { ...value }).then(res => console.log(res));
+        axios.post('/api/mail', { ...value })
+            .then((res) => {
+                if (res.status == 200) {
+                    toast.success("Mail sent Successfully !!", {
+                        theme: 'dark'
+                    });
+                    setValue({ ...initialState });
+                } else {
+                    toast.error("Try again Later :(", {
+                        theme: 'dark'
+                    });
+                }
+            });
+
     }
 
 
     return (
         <div>
+            {/* <Loading /> */}
             <PageContainer >
                 <PageTitle>CONTACT</PageTitle>
                 <div className={styles.spaceAbove}>

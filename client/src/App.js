@@ -6,6 +6,8 @@ import { Scrollbars } from 'react-custom-scrollbars';
 import Particles from 'react-particles-js';
 import { particleJson } from './Models/particle';
 import { AppContext } from './Context/AppContext';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './App.scss';
 import './sass/index.scss'
 
@@ -58,7 +60,7 @@ const App = (props) => {
               <Route render={() => <Redirect to={{ pathname: "/" }} />} />
 
             </Switch>
-
+            <ToastContainer position="bottom-right" />
             <Footer />
 
           </AppContext.Provider>
