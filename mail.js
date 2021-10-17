@@ -36,7 +36,8 @@ const sendMail = async (values) => {
             email : ${values.email}`
         };
 
-        let res = transportMail(transporter, options)
+        let res = await transportMail(transporter, options)
+        return res;
     } catch (e) {
         return e;
     }
